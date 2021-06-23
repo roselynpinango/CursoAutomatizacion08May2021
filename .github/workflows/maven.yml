@@ -19,4 +19,6 @@ jobs:
       - name: Build and Run Tests
         run: mvn test --batch-mode -Dmaven.test.failure.ignore=true
       - name: Publish Test Report
-        uses: starburstdata/action-testng-report@v1
+        uses: roselynpinango/action-testng-report@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
